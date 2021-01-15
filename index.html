@@ -3,43 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1 id="title">Title</h1>
-    <p id="description">description</p>
-
     <form id="survey-form">
-        <label id="name-label">Name: </label>
-        <input type="text" id="name" placeholder="Your name" required>
+        <h1 id="title">Form title</h1>
+        <p id="description">Form description</p>
 
-        <label id="email-label">Email: </label>
-        <input type="email" id="email" placeholder="example@example.com" required>
+        <div class="shrinker">
+            <label id="name-label">Name: </label>
+            <div class="wrapper">
+                <input type="text" id="name" placeholder="Your name" required>
+                <i class="check namecheck fa fa-check-circle" aria-hidden="true"></i>
+            </div>
 
-        <label id="number-label">Number: </label>
-        <input type="number" id="number" placeholder="Number" min="0" max="20">
+            <label id="email-label">Email: </label>
+            <div class="wrapper">
+                <input type="email" id="email" placeholder="example@example.com" required>
+                <i class="check emailcheck fa fa-check-circle" aria-hidden="true"></i>
+            </div>
+            
+            <label id="number-label">Number: </label>
+            <input type="number" id="number" placeholder="Number" min="0" max="20">
 
-        <select id="dropdown">
-            <option>One</option>
-            <option>Two</option>
-            <option>Three</option>
-            <option>Four</option>
-        </select>
+            <select id="dropdown">
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+                <option>Four</option>
+            </select>
 
-        <div>
-            <input type="radio" value="One" name="form-radio">
-            <input type="radio" value="Two" name="form-radio">
-            <input type="radio" value="Three" name="form-radio">
+            <div class="selector">
+                <input type="radio" value="One" name="form-radio"><label>Radio option 1</label>
+            </div>
+            <div class="selector">
+                <input type="radio" value="Two" name="form-radio"><label>Radio option 2</label>
+            </div>
+            <div class="selector">
+                <input type="radio" value="Three" name="form-radio"><label>Radio option 3</label>
+            </div>
+
+            <div class="selector">
+                <input type="checkbox" value="One"><label>Checkbox option 1</label>
+            </div>
+            <div class="selector">
+                <input type="checkbox" value="Two"><label>Checkbox option 2</label>
+            </div>
+            <div class="selector">
+                <input type="checkbox" value="Three"><label>Checkbox option 3</label>
+            </div>
+            
+            <label>Text area</label>
+            <textarea></textarea>
+
         </div>
-
-        <div>
-            <input type="checkbox" value="One">
-            <input type="checkbox" value="Two">
-            <input type="checkbox" value="Three">
-        </div>
-
-        <textarea></textarea>
 
         <input type="submit" id="submit">
     </form>

@@ -12,7 +12,6 @@ body{
 }
 
 #title{
-    margin-top: 30px;
     font-size: 60px;
     text-align: center;
     font-weight: bold;
@@ -27,6 +26,7 @@ body{
 
 #survey-form {
     display: flex;
+    align-items: stretch;
     flex-direction: column;
     width: 70%;
 }
@@ -68,10 +68,45 @@ label{
 #name:focus, #email:focus{
     outline: none;
     border: 1px solid black;
-    box-shadow: -2px 3px 0px black;
+    box-shadow: -4px 6px 0px black;
 }
 
-.radio{
+.number{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#number{
+    outline: none;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: box-shadow 0.5s;
+}
+#number:focus{
+    box-shadow: -4px 6px 0 black;
+    border: 1px solid grey;
+}
+
+#dropdown{
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+input[type="radio"], input[type="checkbox"]{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.selector{
+    align-self: center;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -80,6 +115,9 @@ label{
     font-size: 20px;
 }
 textarea{
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
     max-width: 98%;
     padding: 10px;
 }
@@ -107,6 +145,7 @@ input[type="submit"]{
     }
     .shrinker{
         margin: 5px;
+        padding: 10px;
     }
     textarea{
         max-width: 95%;
